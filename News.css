@@ -1,0 +1,849 @@
+*{
+    margin:0;padding:0;
+    box-sizing:border-box;
+    text-decoration: none;/* Suppression de la décoration du texte */
+    outline: none; /* Suppression des contours */
+    border:none;/* Suppression des bordures */
+    text-transform: capitalize;/* Mise en capitale des premiers caractères des mots */
+    transition: all .2s linear;/* Transition douce pour toutes les propriétés */
+}
+
+/* Configuration de base pour le HTML */
+html{
+    font-size: 62.5%;/* Redimensionnement de la taille de la police */
+    overflow-x: hidden; /* Suppression du défilement horizontal */
+    scroll-padding-top: 5.5rem;/* Espacement de défilement en haut */
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover; /* Pour ajuster la taille de l'image */
+    background-position: center; /* Pour positionner l'image au centre */
+    /* background-repeat: no-repeat; (si vous ne voulez pas que l'image se répète) */
+  }
+
+/*introduction css*/
+#video-bg2 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Place la vidéo derrière le contenu */
+    background: transparent;
+  }
+
+  header{
+    position: fixed; /* Fixé en haut */
+    top: 0; /* Aligner en haut */
+    left: 0; /* Aligner à gauche */
+    right: 0; /* Aligner à droite */
+    background-size: cover; /* Couvrir le fond */
+    background-position: center; /* Centrer le fond */
+    height: 100px; /* Hauteur fixe */
+    padding: 1rem; /* Padding intérieur */
+    display: flex; /* Disposition flexible */
+    align-items: center; /* Alignement vertical centré */
+    justify-content: space-between; /* Espacement entre les éléments */
+    z-index: 1000; /* Z-index élevé pour être au-dessus des autres éléments */
+    box-shadow: var(--box-shadow); /* Ombre définie par variable */
+    text-align: center; /* Centrer le texte */
+}
+    
+    
+/* Style pour les liens de la barre de navigation */
+header .navbar a{
+    font-size: 1.7rem; /* Taille de police */
+    border-radius: 4.5rem; /* Bordures arrondies */
+    padding: .6rem 1.5rem; /* Padding intérieur */
+}
+
+/* Style pour le logo */
+header .logo {
+    color: #ffffff; /* Couleur du texte */
+    font-size: 2rem; /* Taille de police */
+    font-weight: bolder; /* Police en gras */
+}
+
+/* Style pour les icônes de l'en-tête */
+header .icons #menu-bars {
+    display: none; /* Cacher par défaut */
+}
+
+/* Formulaire de recherche */
+#search-form {
+    position: fixed; /* Fixé */
+    top: -110%; /* Hors écran */
+    left: 0; /* Aligner à gauche */
+    height: 100%; /* Hauteur totale */
+    width: 100%; /* Largeur totale */
+    z-index: 1004; /* Z-index élevé */
+    background: rgba(0, 0, 0, .8); /* Fond semi-transparent */
+    display: flex; /* Disposition flexible */
+    align-items: center; /* Alignement vertical centré */
+    justify-content: center; /* Justification centrée */
+    padding: 0 1rem; /* Padding intérieur */
+}
+
+/* Formulaire de recherche actif */
+#search-form.active {
+    top: 0; /* Positionner en haut de l'écran */
+}
+
+/* Style pour la boîte de recherche */
+#search-form #search-box {
+    width: 50rem; /* Largeur de la boîte */
+    border-bottom: .1rem solid #fff; /* Bordure inférieure blanche */
+    padding: 1rem 0; /* Padding intérieur */
+    color: #fff; /* Couleur du texte */
+    font-size: 3rem; /* Taille de police */
+    text-transform: none; /* Pas de transformation de texte */
+    background: none; /* Pas de fond */
+}
+
+/* Placeholder de la boîte de recherche */
+#search-form #search-box::placeholder {
+    color: #eee; /* Couleur du placeholder */
+}
+
+/* Suppression du bouton d'annulation de recherche */
+#search-form #search-box::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+/* Style pour les labels du formulaire de recherche */
+#search-form label {
+    color: #fff; /* Couleur du texte */
+    cursor: pointer; /* Curseur de pointeur */
+    font-size: 3rem; /* Taille de police */
+}
+
+/* Hover sur les labels du formulaire de recherche */
+#search-form label:hover {
+    color: var(--green); /* Couleur de survol */
+}
+
+/* Fermeture du formulaire de recherche */
+#search-form #close {
+    position: absolute; /* Positionnement absolu */
+    color: #fff; /* Couleur du texte */
+    cursor: pointer; /* Curseur de pointeur */
+    top: 2rem; /* Positionnement en haut */
+    right: 3rem; /* Positionnement à droite */
+    font-size: 5rem; /* Taille de police */
+}
+
+/* Style pour les icônes de l'en-tête */
+header .icons i,
+header .icons a {
+    cursor: pointer; /* Curseur de pointeur */
+    height: 4.5rem; /* Hauteur */
+    line-height: 4.5rem; /* Hauteur de ligne */
+    width: 4.5rem; /* Largeur */
+    text-align: center; /* Texte centré */
+    font-size: 1.4rem; /* Taille de police */
+    color: white; /* Couleur du texte */
+    margin-right: 1rem; /* Marge droite */
+    background: var(--black); /* Fond noir */
+    border-radius: 50%; /* Bordures arrondies */
+}
+
+/*les icônes de l'en-tête */
+header .icons i:hover,
+header .icons a:hover{
+    color: #ffffff; /* Couleur blanche au survol */
+    background: #192a56; /* Fond noir au survol */
+    transform: rotate(360deg); /* Rotation de 360 degrés au survol */
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    background:rgba(0, 0, 0, 0.721);/* Fond semi-transparent au survol ou actif */
+}
+
+/* Conteneur des planètes en ligne */
+.planet-row {
+    display: flex; /*in the same line*/
+}
+
+/* Conteneur des planètes */
+.planet-container {
+    position: relative; /* Position relative pour les enfants positionnés */
+    display: flex; /* Affichage flexible */
+    align-items: center; /* Alignement vertical centré */
+    
+}
+
+/* Style pour la lune */
+#moon1 {
+    width: 60px; /* Largeur de la lune */
+}
+
+/* Style pour les images de la Terre, du Soleil et de la Lune */
+.moonearthsun {
+    width: 50px; /* Largeur des images */
+    transition: transform 0.6s ease; /* Transition de transformation douce */
+    vertical-align: middle; /* Alignement vertical au milieu */
+    margin-right: 5px; /* Marge droite */
+}
+
+/* Texte des planètes */
+.planet span {
+    opacity: 0; /* Texte invisible par défaut */
+    position: absolute; /* Positionnement absolu */
+    top: 25%; /* Positionnement vertical */
+    left: 50%; /* Positionnement horizontal */
+    transform: translateX(-50%); /* Centrer horizontalement */
+    padding: .5rem 1.5rem; /* Padding intérieur */
+    border-radius: 5.5rem; /* Bordures arrondies */
+    white-space: nowrap; /* Pas de retour à la ligne */
+    color: white; /* Couleur du texte */
+    transition: opacity .8s ease; /* Transition de l'opacité douce */
+}
+
+/* Texte visible au survol */
+.planet:hover span {
+    opacity: 1; /* Texte visible */
+    animation: slide .5s forwards; /* Animation de glissement */
+}
+
+/* Animation des images au survol */
+.planet-container:hover .moonearthsun {
+    animation: slide .8s forwards; /* Animation de glissement */
+    transform: translateX(70px); /* Translation de 70px au survol */
+}
+
+/* Animation des planètes */
+.planet-container .planet {
+    animation: slide .5s forwards; /* Animation de glissement */
+    width: 120px; /* Largeur des planètes */
+}
+
+/* Animation des planètes au survol */
+.planet-container:hover .planet {
+    animation: slide 1s forwards; /* Animation de glissement au survol */
+}
+    
+    /* Style général pour les sections */
+section{
+    position: relative;
+    height: 100vh;
+    align-items: center;
+    justify-content: 106px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex; 
+    justify-content: center;
+    padding: 80px 100px;
+    color: #fff;
+}
+  
+.container{
+    width:1200px;
+    padding: 20px;
+    max-width: calc(100vw - 40px);
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-title{
+    font-family: "Playfair Display", serif;
+    font-size: 4em;
+    margin-bottom: 50px;
+}
+.container .content{
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-box{
+    text-align: center; /* يوجه النص إلى الوسط أفقيًا */
+    margin-left: -70px;
+    z-index: 111;
+    position: relative;
+    font-family: system-ui;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.content .image{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.content .image img{
+margin-left: 50px;
+z-index: 111;
+position: absolute;
+top: 0;
+left: 0;
+width: 600px;
+height: 300px;
+object-fit: cover;
+border-radius: 20px;
+}
+
+.contentainer .text-box h3{
+    font-family: "Playfair Display", serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.content .text-box p{
+    font-family: system-ui;
+    margin-bottom: 10px;
+    margin-left: -10px;
+    font-size: 1.2rem;
+}
+.section-title{
+    font-size: 3em;
+     margin-bottom: 80px;
+}
+.info-title{
+    font-size: 700px;
+    margin-bottom: 10px;
+}
+.info{
+    width: 700px;
+    margin-left: 50px;
+}
+.wrapper{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgb(235, 229, 229);
+    backdrop-filter: blur(1000px);
+    color: #faf5f5;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(247, 245, 245, 0.904);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.menuTop .logo img{
+    width:60px;
+}
+.menuTop{
+    /* background-color: red; */
+    width:1200px;
+    padding: 20px;
+    max-width: calc(100vw - 40px);
+    margin: auto;
+    padding-top:10px;
+    display: grid;
+    grid-template-columns: 10% auto;
+}
+.menuTop .menu{
+    list-style: none;
+    padding:0;
+    text-align: right;
+}
+.menuTop .menu li{
+    display: inline-block;
+    padding:5px 30px;
+    text-shadow: 0 0 20px #000;
+}
+
+.bigTitle {
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+.bigTitle .title{
+    font-family: "Playfair Display", serif;
+    font-size: xx-large;
+    text-align: center;
+    margin:130px 0;
+    color: #ffff;
+    
+    
+}
+.bigTitle .des{
+    font-family: system-ui;
+    font-size: large;
+    max-width: 500px;
+    margin: 10px auto;
+    color:white;
+}
+.bigTitle .desss{
+    font-family: system-ui;
+    font-size: large;
+    max-width: 500px;
+    margin: 10px auto;
+    color:white;
+    margin-top: 100px;
+}
+.transport ul{
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    column-gap: 20px;
+}
+.transport li{
+    text-align: center;
+    color:#ffffff4D;
+}
+.transport li i{
+    display: block;
+    margin-bottom: 20px;
+    font-size: xxx-large;
+    color:#fff;
+}
+.zoom{
+    transform: scale(1);
+    transition: 0.5s;
+}
+.zoom:hover{
+    transform: scale(1.2);
+}
+.checkin{
+    display: grid;
+    grid-template-columns: 24.25% 24.25% 24.25% 24.25%;
+    column-gap: 1%;
+    grid-template-rows:  300px 300px;
+    row-gap: 10px;
+}
+.checkin .item{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+.checkin img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+}
+
+.checkin .item .content .des{
+    opacity: 0.7;
+}
+.checkin .item .content .title h3{
+    color: rgb(255, 255, 255);
+    z-index: 111;
+    margin-right: -100px;
+    position: absolute;
+    bottom:10px;
+    left:10px;
+    font-family: 'Lobster', cursive;
+    font-size: medium;
+
+}
+.checkin .item:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.checkin .item:nth-child(2){
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.fare1{
+    display: grid;/* Utiliser flexbox pour aligner les éléments au centre */
+    grid-template-columns: auto auto auto;/* Creating three equally spaced columns */
+    column-gap: 30px; /* Spacing between columns */
+}
+
+.fare1 .item{
+    box-shadow:  0 0 10px  #030D1F;
+    background-color: #030D1F;
+    border-radius: 20px;/* Réduire le rayon du border-radius pour rendre le carré plus petit */
+    text-align: center;
+    padding:50px;/* Réduire l'espacement intérieur pour diminuer la taille globale du carré */
+    box-shadow:  0 0 10px  #030D1F;
+    
+}
+.fare1 .item ul{
+    padding: 0;/* Suppression du remplissage par défaut */
+    list-style: none;
+}
+
+.fare1 .item ul li{
+    padding: 10px;
+    color:rgb(253, 250, 255);
+    font-size:medium;
+}
+
+
+.fare1 .item ul h4{
+    color:rgb(197, 93, 195);/* Setting heading color */
+
+    top:50%;
+    left:50%;
+    
+    font-family: 'Lobster', cursive;
+    font-size: x-large;/* Setting font size */
+}
+
+/* footer section start here */
+/* Styles généraux pour le pied de page */
+footer {
+    background: rgb(0, 0, 0); /* Fond noir pour le pied de page */
+    padding: 60px 0; /* Remplissage en haut et en bas du pied de page */
+    margin-top: 0%; /* Marge en haut du pied de page */
+}
+
+/* Styles pour le logo du pied de page */
+footer .logo {
+    color: #ffffff; /* Couleur du texte du logo */
+    font-size: 4rem; /* Taille de la police du logo */
+    font-weight: bolder; /* Poids de la police du logo */
+}
+
+/* Styles pour la grille de contenu du pied de page */
+footer > div {
+    display: grid; /* Utilisation de CSS Grid pour le contenu */
+    grid-template-columns: repeat(4, 1fr); /* Quatre colonnes de largeur égale */
+}
+
+/* Styles pour le texte de copyright du pied de page */
+footer .copyright span {
+    color: #fff; /* Couleur du texte de copyright */
+    font-size: 12px; /* Taille de la police du texte de copyright */
+    display: inline-block; /* Affichage en ligne du texte de copyright */
+    margin-top: 5px; /* Marge en haut du texte de copyright */
+}
+
+/* Styles pour les images de copyright dans le pied de page */
+footer .copyright img {
+    height: 30px; /* Hauteur des images de copyright */
+}
+
+/* Styles pour les titres de niveau 1 dans le pied de page */
+footer h1 {
+    font-size: 18px; /* Taille de la police pour les titres */
+    position: relative; /* Positionnement relatif pour les titres */
+    margin-bottom: 30px; /* Marge en bas des titres */
+    color: white; /* Couleur du texte des titres */
+}
+
+/* Styles pour le séparateur après les titres de niveau 1 dans le pied de page */
+footer h1:after {
+    content: ''; /* Contenu vide pour le séparateur */
+    position: absolute; /* Positionnement absolu pour le séparateur */
+    left: 0; /* Positionnement à gauche du séparateur */
+    bottom: -8px; /* Décalage vers le bas du séparateur */
+    display: block; /* Affichage en bloc du séparateur */
+    width: 60px; /* Largeur du séparateur */
+    height: 2px; /* Hauteur du séparateur */
+    background: var(rgb(255, 255, 255)); /* Couleur de fond du séparateur */
+}
+
+/* Styles pour les listes non ordonnées dans le pied de page */
+footer ul {
+    list-style-type: none; /* Suppression des puces de liste */
+}
+
+/* Styles pour les éléments de liste pairs dans le pied de page */
+footer ul li:nth-child(even) {
+    margin: 10px 0; /* Marge des éléments de liste pairs */
+}
+
+/* Styles pour les liens dans le pied de page */
+footer ul li a {
+    color: white; /* Couleur des liens */
+    text-decoration: none; /* Suppression du soulignement des liens */
+    font-size: 14px; /* Taille de la police des liens */
+    transition: all .3s ease-in-out; /* Transition douce pour les changements de style */
+}
+
+footer ul li a:hover {
+    color: white; /* Couleur des liens au survol */
+}
+
+/* Styles pour les icônes de réseaux sociaux dans le pied de page */
+footer .footer-socials a {
+    margin-right: 20px; /* Marge à droite des icônes de réseaux sociaux */
+    font-size: 22px; /* Taille de la police des icônes de réseaux sociaux */
+    color: white; /* Couleur des icônes de réseaux sociaux */
+}
+
+footer .footer-socials img {
+    width: 30px; /* Largeur des icônes de réseaux sociaux */
+    margin: 0 12px; /* Marge autour des icônes de réseaux sociaux */
+    cursor: pointer; /* Curseur de pointeur pour les icônes de réseaux sociaux */
+}
+
+footer .footer-socials a:hover {
+    color:#8f5822; /* Couleur des icônes de réseaux sociaux au survol */
+}
+
+.footer-socials img {
+    width: 30px; /* Largeur des icônes de réseaux sociaux */
+    margin: 0 12px; /* Marge autour des icônes de réseaux sociaux */
+    cursor: pointer; /* Curseur de pointeur pour les icônes de réseaux sociaux */
+}
+
+/* loader part start here */
+/* Conteneur du loader */
+.loader-container{
+    min-height: 100vh; /* Hauteur minimale égale à 100% de la hauteur de la fenêtre */
+    display: flex; /* Utilisation de flexbox pour le centrage vertical et horizontal */
+    justify-content: center; /* Centrage horizontal */
+    background: #272626f7; /* Couleur de fond avec une certaine transparence */
+    width: 100%; /* Largeur de 100% */
+    height: 100%; /* Hauteur de 100% */
+    align-items: center; /* Centrage vertical */
+    position: fixed; /* Position fixe par rapport à la fenêtre */
+    top: 0; /* Alignement en haut de la fenêtre */
+    left: 0; /* Alignement à gauche de la fenêtre */
+    z-index: 10000; /* Indice de positionnement pour s'assurer que le loader soit au-dessus des autres éléments */
+    overflow: hidden; /* Masquage du débordement pour éviter le défilement */
+}
+
+/* Animation de sortie du loader */
+.loader-container.fade-out{
+    top:110%; /* Déplace le loader vers le bas de la fenêtre */
+    opacity:0; /* Réduit l'opacité à 0 pour le rendre invisible */
+}
+
+/* Style des cercles du loader */
+.circle01{
+    position: absolute; /* Position absolue par rapport à son conteneur */
+    width: 300px; /* Largeur du premier cercle */
+    height: 300px; /* Hauteur du premier cercle */
+    border: 2px solid #191919; /* Bordure du cercle */
+    border-radius: 50%; /* Bordure arrondie pour créer un cercle */
+    animation: animate 3s linear infinite; /* Animation de rotation avec une durée de 3 secondes */
+}
+
+.circle02{
+    width: 200px; /* Largeur du deuxième cercle */
+    height: 200px; /* Hauteur du deuxième cercle */
+    animation: animate 6s linear infinite; /* Animation de rotation avec une durée de 6 secondes */
+}
+
+.circle03{
+    width: 100px; /* Largeur du troisième cercle */
+    height: 100px; /* Hauteur du troisième cercle */
+    animation: animate 2s linear infinite; /* Animation de rotation avec une durée de 2 secondes */
+}
+
+/* Définition de l'animation de rotation */
+@keyframes animate{
+    0%{
+        transform: rotate(0deg); /* Rotation de 0 degré au début de l'animation */
+    }
+    100%{
+        transform: rotate(360deg); /* Rotation de 360 degrés à la fin de l'animation pour revenir à la position initiale */
+    }
+}
+
+/* Style du point au centre de chaque cercle */
+.circle01::before{
+    content: ''; /* Contenu généré avant l'élément */
+    position: absolute; /* Position absolue par rapport au cercle */
+    top: -12px; /* Positionnement vers le haut pour le placer au centre */
+    left: 50%; /* Positionnement horizontal au centre */
+    transform: translateX(-50%); /* Décalage de 50% de la largeur pour le centrer horizontalement */
+    width: 20px; /* Largeur du point */
+    height: 20px; /* Hauteur du point */
+    background: var(--clr); /* Couleur de fond du point */
+    border-radius: 50%; /* Bordure arrondie pour créer un cercle */
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr); /* Ombre pour créer un effet de halo */
+}
+
+
+
+@media screen and (max-width: 820px) {
+    .checkin{
+        grid-template-columns: auto auto;
+        grid-template-rows: 300px 300px 300px 300px;
+    }
+    .checkin .item:nth-child(2){
+        grid-column-start: unset;
+        grid-column-end: unset;
+        grid-row-start: unset;
+        grid-row-end: unset;
+    }
+    .checkin .item:nth-child(1){
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .checkin .item:nth-child(5){
+        grid-column-start: 2;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+
+    .fare{
+        column-gap: 5px;
+    }
+    .fare .item{
+        padding: 15px;
+    }
+    
+  }
+
+  @media (max-width:991px){
+    
+    html{
+        font-size:55%;
+    }
+
+    header{
+        padding: 1rem 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+}
+@media (max-width:768px){
+   
+    header .icons #menu-bars{
+        display: inline-block;
+    
+    }
+    header .navbar{
+        width: 100%;
+        top:100%; left:0; right:0;
+        background-size: cover;
+        background-position: center; 
+        height: 100px;
+        padding:1rem ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        box-shadow: var(--box-shadow);
+        text-align: center;    
+        position: absolute;
+        background:#0000005f;
+        border-top:.1rem solid rgba(0,0,0,.2);
+        border-bottom:.1rem solid rgba(0,0,0,.2);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        justify-content: center;
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #fffdfd00;
+    }
+    .planet span {
+        opacity: 0;
+        position: absolute;
+        top:30%; /* Adjust spacing */
+        left: 50%; /* Center the text horizontally */
+        transform: translateX(-50%); /* Added */
+        padding: .5rem 1.5rem;
+        border-radius: 5.5rem;
+        white-space: nowrap;
+        color: white;
+        transition: opacity .8s ease;
+    }
+
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
+    }
+
+    .home .home-slider .slide .content h1{
+        font-size:5cap;
+    }
+    
+}
+
+@media (max-width:450px){
+    html{
+        font-size:50%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .transport{
+        width:100%;
+        overflow: auto;
+    }
+    .transport ul{
+        grid-template-columns:  80px 80px 80px 80px 80px 80px;
+    }
+    .checkin{
+        grid-template-columns: 100%;
+        grid-template-rows: 300px 300px 300px 300px 300px 300px;
+    }
+    .checkin .item:nth-child(1),
+    .checkin .item:nth-child(5){
+        grid-column-start: unset;
+        grid-column-end: unset;
+        grid-row-start: unset;
+        grid-row-end: unset;
+    }
+    .fare{
+        grid-template-columns: 100%;
+    }
+    footer{
+        padding:10px;
+    }
+    footer .content{
+        padding:0;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+    footer .item:nth-child(4){
+        grid-column-start: 1;
+        grid-column-end: 4;
+        padding-right:20px;
+    }
+    .menuTop{
+        position: fixed;
+        padding:20px;
+        z-index: 5;
+         background-color: #ffffff4D;
+    }
+    .menuTop .logo img{
+        width:30px;
+    }
+    .menuTop .menu{
+        position: fixed;
+        left:0;
+        top:0;
+        height:100%;
+        background-color: #ffffff4D;
+        backdrop-filter: blur(10px);
+        z-index: 6;
+        text-align: left;
+        width:80%;
+        margin: 0;
+        transition: 0.5s;
+        transform: translate(-100%);
+    }
+    .menuTop .menu li{
+        display: block;
+        padding:20px;
+    }
+    .menuTop .menu.active{
+        transform: translate(0);
+    }
+    .toggleMenu{
+        display: block;
+        text-align: right;
+        text-shadow: 0 0 10px #000;
+    }
+    
+    
+}
+
+   
+    

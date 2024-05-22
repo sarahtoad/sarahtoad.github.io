@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Définition des métadonnées -->
+    <meta charset="UTF-8"> <!-- Encodage des caractères -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilité avec Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Affichage sur appareils mobiles -->
+    <title>Milkeyway</title> <!-- Titre de la page -->
+    <!-- Liens vers les fichiers CSS et bibliothèque d'icônes -->
+    <link rel="stylesheet" href="Milkeyway.css"> <!-- Fichier CSS local -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> <!-- Bibliothèque Font Awesome pour les icônes -->
+    <link rel="shortcut icon" href="image/constellation_9286813.png" type="image/x-icon"> <!-- Icône de l'onglet -->
+</head>
+<body>
+    <!-- Vidéo en arrière-plan -->
+    <video class="bg-video" loop muted autoplay>
+        <source src="image/2_Ciel_étoilé,_Fond_d'écran_animé_YouTube_Google_Chrome_2024_04.mp4" type="video/mp4">
+    </video>
+    <!-- En-tête -->
+    <header>
+        <!-- Logo et barre de navigation -->
+        <a href="Home.html" class="logo"><i class="fas fa-rocket"></i>astro.</a>
+        <nav class="navbar">
+            <!-- Liens de navigation -->
+            <div class="planet-row">
+                <!-- Lien actif pour la page d'accueil -->
+                <div class="planet-container">
+                    <a class="active planet" href="Home.html">
+                        <span>Home</span> <!-- Texte du lien -->
+                        <img class="moonearthsun" id="moon1" src="image/Mercury_planet_or_foreign_planet_-9-removebg-preview.png" alt=""><!-- Image du lien -->
+                    </a>
+                </div>
+                <!-- Autres liens de navigation -->
+                <!-- Lien vers Milkeyway -->
+                <div class="planet-container">
+                    <a class=" planet" href="Milkeyway.html">
+                        <span>milkey way</span> <!-- Texte du lien -->
+                        <img class="moonearthsun" id="moon" src="image/Mercury_planet_or_foreign_planet_-8-removebg-preview.png" alt=""> <!-- Image du lien -->
+                    </a>
+                </div>
+                <!-- Lien vers galaxies -->
+                <div class="planet-container">
+                    <a class="planet" href="galaxies.html">
+                        <span>astro</span> <!-- Texte du lien -->
+                        <img class="moonearthsun" id="moon1" src="image/planet-isolated-white-background-3d-render-image-with-clipping-path-removebg-preview.png" alt=""> <!-- Image du lien -->
+                    </a>
+                </div>
+                <!-- Lien vers les news -->
+                <div class="planet-container">
+                    <a class="planet" href="News.html">
+                        <span>news</span> <!-- Texte du lien -->
+                        <img class="moonearthsun" src="image/pinkplanet.png" alt=""> <!-- Image du lien -->
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- Icônes pour le menu, la recherche et l'utilisateur -->
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i> <!-- Icône de menu pour la navigation -->
+            <i class="fas fa-search" id="search-icon"></i> <!-- Icône de recherche -->
+            <i class="fas fa-user" id="fa-user"></i> <!-- Icône de l'utilisateur -->
+        </div>
+    </header>
+    <!-- Formulaire de recherche -->
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box"> <!-- Champ de recherche -->
+        <label for="search-box" class="fas fa-search"></label> <!-- Icône de recherche -->
+        <i class="fas fa-times" id="close"></i> <!-- Icône pour fermer le formulaire de recherche -->
+    </form>
+    <!-- Section des pages -->
+    <section class="pages">
+        <div class="container">
+            <div id="slide">
+                <!-- Diapositives avec images et descriptions -->
+                
+                 <!-- Diapositive 11 : Telescope -->
+                 <div class="item" style="background-image: url(image_milkey_way/photo_11_2024-05-21_01-03-30.jpg);">
+                    <div class="content">
+                        <div class="name">Telescope</div>
+                        <div class="des">A telescope is an optical instrument designed to make distant objects appear closer and more detailed. It works by collecting and magnifying light, allowing astronomers to observe celestial bodies such as stars, planets, and galaxies. Telescopes have revolutionized our understanding of the universe by providing a deeper look into space.</div>
+                    </div>
+                </div>
+                <!-- Diapositive 1 : Astronaute -->
+                <div class="item" style="background-image: url(image_milkey_way/astronut\ \(1\).jpg);">
+                    <div class="content">
+                        <div class="name">Astronaute</div> <!-- Titre de l'élément -->
+                        <div class="des">Ladies and gentlemen, buckle up your seat belts; the rocket will launch in 1... 2... 3...</div> <!-- Description de l'élément -->
+                    </div>
+                </div>
+                <!-- Plus d'éléments de diapositive -->
+                <!-- Diapositive 2 : Earth -->
+                <div class="item" style="background-image: url(image_milkey_way/earth\ \(2\).jpg);">
+                    <div class="content">
+                        <div class="name">Earth</div>
+                        <div class="des">Earth is the third planet from the Sun, known for its unique combination of land, water, and atmosphere that supports life.</div>
+                    </div>
+                </div>
+                <!-- Diapositive 3 : Saturne -->
+                <div class="item" style="background-image: url(image_milkey_way/saturn\ \(2\).jpg);">
+                    <div class="content">
+                        <div class="name">Saturne </div>
+                        <div class="des">Saturn is famous for its beautiful rings made of ice and dust particles. It's a gas giant with numerous moons.</div>
+                    </div>
+                </div>
+                <!-- Diapositive 4 : Mars -->
+                <div class="item" style="background-image: url(image_milkey_way/mars\ \(3\).jpg);">
+                    <div class="content">
+                        <div class="name">Mars</div>
+                        <div class="des">Mars is known as the "Red Planet" because of its reddish  </div>
+                    </div>
+                </div>
+                 <!-- Diapositive 5 : Uranus -->
+                 <div class="item" style="background-image: url(image_milkey_way/uranus\ \(2\).jpg);">
+                    <div class="content">
+                        <div class="name">Uranus</div>
+                        <div class="des">Uranus is an ice giant with a tilted axis, causing it to rotate on its side. It has a pale blue-green color due to methane in its atmosphere.</div>
+                    </div>
+                </div>
+                <!-- Diapositive 6 : Jupiter -->
+                <div class="item" style="background-image: url(image_milkey_way/jupiter\ \(2\).jpg);">
+                    <div class="content">
+                        <div class="name">Jupiter</div>
+                        <div class="des">Jupiter is the largest planet, with a turbulent atmosphere marked by colorful bands and the famous Great Red Spot, a massive storm.</div>
+                    </div>
+                </div>
+                <!-- Diapositive 7 : Neptune -->
+                <div class="item" style="background-image: url(image_milkey_way/neptune.jpg);">
+                    <div class="content">
+                        <div class="name">Neptune</div>
+                        <div class="des">Neptune is another ice giant, known for its deep blue color and strong winds, making it one of the windiest places in the solar system.</div>
+                    </div>
+                </div>
+                <!-- Diapositive 8 : Venus -->
+                <div class="item" style="background-image: url(image_milkey_way/venus\ \(4\).jpg);">
+                    <div class="content">
+                        <div class="name">Venus</div>
+                        <div class="des">Venus is often called Earth's twin due to its similar size, but it has a thick, toxic atmosphere and is the hottest planet in the solar system.</div>
+                    </div>
+                </div>
+                <!-- Diapositive 9 : Mercury -->
+                <div class="item" style="background-image: url(image_milkey_way/mercury.jpg);">
+                    <div class="content">
+                        <div class="name">Mercury</div>
+                        <div class="des">Mercury is the smallest planet and closest to the Sun, with extreme temperature variations between its scorching day and freezing night.</div>
+                    </div>
+                </div>
+                <!-- Diapositive 10 : Sun -->
+                <div class="item" style="background-image: url(image_milkey_way/sun.jpeg);">
+                    <div class="content">
+                        <div class="name">Sun</div>
+                        <div class="des">The Sun is the star at the center of our solar system, providing the essential light and heat that sustain life on Earth. Composed primarily of hydrogen and helium, it generates energy through nuclear fusion in its core. The Sun's influence extends far beyond its immediate surroundings, driving weather patterns, climate, and the orbits of all the planets.</div>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- Boutons pour faire défiler les diapositives -->
+            <div class="buttons">
+                <!-- Bouton précédent -->
+                <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+                <!-- Bouton suivant -->
+                <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <!-- Pied de page -->
+    <footer>
+        <!-- Informations sur le site et liens vers les réseaux sociaux -->
+        <div class="container">
+            <div class="copyright">
+                <!-- Logo et année du site -->
+                <div>
+                    <a href="Home.html" class="logo"><i class="fas fa-rocket"></i>astro.</a>
+                </div>
+                <center><span>2024 website</span></center> <!-- Année du site -->
+            </div>
+            <!-- À propos de nous -->
+            <div>
+                <h1>About us</h1>
+                <ul>
+                    <li><a href="#ourteam">WHO WE ARE: <br>Second-year students in computer science</a></li>
+                    <li><a href="#ourteam">CONTACT US:</a></li>
+                    <li><a href="https://www.univ-alger.dz/">FACULTY:<br>University Of Algiers 1</a></li> <!-- Description de l'équipe -->
+                    <!-- ... -->
+                </ul>
+            </div>
+            <!-- Adresses e-mail -->
+            <div id="Email">
+                <h1>Email addresses</h1>
+                <ul>
+                    <!-- Liste des adresses e-mail -->
+                    <li><a href="#">khodjasersoura@gmail.com</a></li>
+                    <li><a href="#">bhlhadjer8@gmail.com</a></li>
+                    <li><a href="#">boulbairmanal0@gmail.com</a></li>
+                    <li><a href="#">hibaboulaloua@gmail.com</a></li>
+                    <!-- ... -->
+                </ul>
+            </div>
+            <!-- Liens vers les réseaux sociaux -->
+            <div class="socials">
+                <div class="footer-socials">
+                    <h1>Socials</h1>
+                    <!-- Liens vers les réseaux sociaux -->
+                    <a href="#"><img class="image" src="image/fb-removebg-preview.png"></a>
+                    <a href="#"><img src="image/xt-removebg-preview.png"></a>
+                    <a href="#"><img src="image/instagram-fill.svg"></a>
+                    <a href="#"><img src="image/mail-line.svg"></a>
+                </div>
+            </div>
+        </div>
+      </footer>
+
+         <!--loader part -->
+           
+         <div class="loader-container">
+            <div class="circle01" style="--clr:#8f5822"></div>
+            <div class="circle01 circle02" style="--clr:#4439de"></div>
+            <div class="circle01 circle03" style="--clr:#832dac"></div>
+        </div>
+      <!--ajout de JS-->
+      <script src="Milkeyway.js"></script>
+    </body>
+    </html>

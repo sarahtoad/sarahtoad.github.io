@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>astro</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="galaxies.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="image/constellation_9286813.png" type="image/x-icon">
+</head>
+<div>
+    <video autoplay muted loop id="video-bg2">
+        <source src="imageastro/2_Ciel_étoilé,_Fond_d'écran_animé_YouTube_Google_Chrome_2024_04.mp4" type="video/mp4">
+    </video>
+    <header class="header1">
+        <a href="Home.html" class="logo"><i class="fas fa-rocket"></i>astro.</a>
+        <nav class="navbar">
+
+         <div class="planet-row">
+
+            <div class="planet-container">
+
+                <a class="active planet" href="Home.html">
+                    <span>Home</span>
+                    <img class="moonearthsun" id="moon1" src="image/Mercury_planet_or_foreign_planet_-9-removebg-preview.png" alt="">
+
+                </a>
+
+            </div>
+            <div class="planet-container">
+
+                <a class=" planet" href="Milkeyway.html">
+                    <span>milkey way</span>
+                    <img class="moonearthsun" id="moon" src="image/Mercury_planet_or_foreign_planet_-8-removebg-preview.png" alt="">
+
+                </a>
+
+            </div>
+
+            <div class="planet-container">
+
+                <a class="planet" href="galaxies.html">
+                    <span>astro</span>
+                    <img class="moonearthsun" id="moon1" src="image/planet-isolated-white-background-3d-render-image-with-clipping-path-removebg-preview.png" alt="">
+
+                </a>
+
+            </div>
+
+            <div class="planet-container">
+
+                <a class="planet" href="News.html">
+                    <span>news</span>
+                    <img class="moonearthsun" src="image/pinkplanet.png" alt="">
+
+                </a>
+
+            </div>
+        
+    </div>
+
+    </nav>
+        
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <div class="pict">
+            
+            <i class="fas fa-search" id="search-icon"></i>
+            <i class="fas fa-user" id="fa-user"></i>
+            </div>
+        </div>
+
+                <!--search form-->
+
+                <form action="" id="search-form">
+                    <input type="search" placeholder="search here..." name="" id="search-box">
+                    <label for="search-box" class="fas fa-search"></label>
+                    <i class="fas fa-times" id="close"></i>
+                </form> 
+                <script src="astro.js"></script>
+</header>
+
+
+
+
+<div class="header2">
+    <!-- 
+        Conteneur principal pour l'en-tête secondaire de la page.
+        La classe "header2" applique des styles spécifiques à cet en-tête.
+    -->
+    <section class="hero reveal">
+        <!-- 
+            Section principale avec les classes "hero" et "reveal".
+            "hero" définit le style général de la section en-tête.
+            "reveal" est utilisé pour l'animation d'apparition.
+        -->
+        <div class="cta container">
+            <!-- 
+                Conteneur pour l'appel à l'action (CTA).
+                La classe "container" centre et organise les éléments à l'intérieur avec flexbox.
+            -->
+            <div class="left-section">
+                <!-- 
+                    Section de gauche contenant le texte de la bannière.
+                    La classe "left-section" applique des styles pour le positionnement et l'espacement.
+                -->
+                <div class="banner-text">
+                    <!-- 
+                        Conteneur pour le texte de la bannière.
+                        La classe "banner-text" applique des styles de texte, tels que la couleur, la taille de la police et l'alignement.
+                    -->
+                    <div class="title">
+                        <!-- 
+                            Conteneur pour le titre de la section.
+                            La classe "title" applique une marge en bas pour espacer le titre du reste du texte.
+                        -->
+                        <h5>WHAT IS ASTRONOMY ?</h5>
+                        <!-- Titre principal de la bannière. -->
+                        <p class="tete">THE SCIENCE OF THE UNIVERSE</p>
+                        <!-- Sous-titre de la bannière. -->
+                    </div>
+                    <div class="informations">
+                        <!-- 
+                            Conteneur pour les informations supplémentaires.
+                            La classe "informations" contrôle l'espacement et l'alignement du texte.
+                        -->
+                        <p>
+                            Astronomy is the scientific study of celestial objects such as stars, planets, comets, and galaxies, as well as phenomena that originate outside Earth's atmosphere. It is one of the oldest natural sciences, as people have always been fascinated by the night sky.
+                        </p>
+                        <!-- 
+                            Paragraphe décrivant l'astronomie.
+                            Ce texte explique l'objet d'étude de l'astronomie.
+                        -->
+                        <p>It combines four domains...</p>
+                        <!-- 
+                            Paragraphe indiquant qu'il existe quatre domaines principaux de l'astronomie.
+                        -->
+                    </div>
+                </div>
+                <button class="btn btn-primary">Read More</button>
+                <!-- 
+                    Bouton d'appel à l'action.
+                    Les classes "btn" et "btn-primary" appliquent des styles de bouton, tels que le padding, la couleur de fond et les transitions.
+                -->
+            </div>
+            <div class="right-section">
+                <!-- 
+                    Section de droite contenant une image.
+                    La classe "right-section" centre l'image verticalement.
+                -->
+                <img src="imageastro/astronautg.png" alt="Astronaut image">
+                <!-- 
+                    Image d'un astronaute.
+                    Le CSS contrôle la hauteur de l'image et applique une animation de rotation.
+                    L'attribut alt fournit une description alternative de l'image pour l'accessibilité.
+                -->
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+<div class="types reveal">
+    <!-- 
+        Conteneur principal pour la section des types d'astronomie.
+        La classe "types" définit le style général de cette section.
+        La classe "reveal" est utilisée pour l'animation d'apparition.
+    -->
+    <div class="container">
+        <!-- 
+            Conteneur pour une carte spécifique.
+            La classe "container" centre et organise les éléments à l'intérieur avec flexbox.
+        -->
+        <div class="card" style="--clr:#009688">
+            <!-- 
+                Carte individuelle avec une couleur de fond spécifique.
+                La variable CSS "--clr" définit la couleur personnalisée pour cette carte.
+            -->
+            <div class="imgbx">
+                <!-- 
+                    Conteneur pour l'image de la carte.
+                    La classe "imgbx" applique des styles pour positionner et dimensionner l'image.
+                -->
+                <img src="imageastro/ast1.jpg" alt="Image related to observational astronomy">
+                <!-- 
+                    Image représentant l'astronomie d'observation.
+                    L'attribut alt fournit une description alternative de l'image pour l'accessibilité.
+                -->
+            </div>
+            <div class="content">
+                <!-- 
+                    Conteneur pour le contenu textuel de la carte.
+                    La classe "content" applique des styles pour le texte et les liens.
+                -->
+                <h2>Observational Astronomy</h2>
+                <!-- Titre de la carte décrivant le type d'astronomie. -->
+                <p>Using telescopes, it observes celestial objects' positions, motions, and properties.</p>
+                <!-- 
+                    Paragraphe décrivant l'astronomie d'observation.
+                    Ce texte explique comment les télescopes sont utilisés pour observer les objets célestes.
+                -->
+                <a href="#">Read more</a>
+                <!-- 
+                    Lien pour en savoir plus sur l'astronomie d'observation.
+                    La classe "btn" applique des styles de lien, tels que la couleur et les transitions.
+                -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- 
+            Conteneur pour une carte spécifique.
+            La classe "container" centre et organise les éléments à l'intérieur avec flexbox.
+        -->
+        <div class="card" style="--clr:#ff3e7f">
+            <!-- 
+                Carte individuelle avec une couleur de fond spécifique.
+                La variable CSS "--clr" définit la couleur personnalisée pour cette carte.
+            -->
+            <div class="imgbx">
+                <!-- 
+                    Conteneur pour l'image de la carte.
+                    La classe "imgbx" applique des styles pour positionner et dimensionner l'image.
+                -->
+                <img src="imageastro/theo.jpg" alt="Image related to theoretical astronomy">
+                <!-- 
+                    Image représentant l'astronomie théorique.
+                    L'attribut alt fournit une description alternative de l'image pour l'accessibilité.
+                -->
+            </div>
+            <div class="content">
+                <!-- 
+                    Conteneur pour le contenu textuel de la carte.
+                    La classe "content" applique des styles pour le texte et les liens.
+                -->
+                <h2>Theoretical Astronomy</h2>
+                <!-- Titre de la carte décrivant le type d'astronomie. -->
+                <p>Develops mathematical models and theories, explaining phenomena with physics and mathematics.</p>
+                <!-- 
+                    Paragraphe décrivant l'astronomie théorique.
+                    Ce texte explique comment les modèles mathématiques et les théories sont utilisés pour expliquer les phénomènes.
+                -->
+                <a href="#">Read more</a>
+                <!-- 
+                    Lien pour en savoir plus sur l'astronomie théorique.
+                    La classe "btn" applique des styles de lien, tels que la couleur et les transitions.
+                -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 
+            Conteneur pour une carte spécifique.
+            La classe "container" centre et organise les éléments à l'intérieur avec flexbox.
+        -->
+        <div class="card" style="--clr:#03a9f4">
+            <!-- 
+                Carte individuelle avec une couleur de fond spécifique.
+                La variable CSS "--clr" définit la couleur personnalisée pour cette carte.
+            -->
+            <div class="imgbx">
+                <!-- 
+                    Conteneur pour l'image de la carte.
+                    La classe "imgbx" applique des styles pour positionner et dimensionner l'image.
+                -->
+                <img src="imageastro/astroph.jpeg" alt="Image related to astrophysics">
+                <!-- 
+                    Image représentant l'astrophysique.
+                    L'attribut alt fournit une description alternative de l'image pour l'accessibilité.
+                -->
+            </div>
+            <div class="content">
+                <!-- 
+                    Conteneur pour le contenu textuel de la carte.
+                    La classe "content" applique des styles pour le texte et les liens.
+                -->
+                <h2>Astrophysics</h2>
+                <!-- Titre de la carte décrivant le type d'astronomie. -->
+                <p>Merges astronomy and physics, studying celestial objects, physical properties and dynamics.</p>
+                <!-- 
+                    Paragraphe décrivant l'astrophysique.
+                    Ce texte explique comment l'astrophysique combine l'astronomie et la physique pour étudier les objets célestes.
+                -->
+                <a href="#">Read more</a>
+                <!-- 
+                    Lien pour en savoir plus sur l'astrophysique.
+                    La classe "btn" applique des styles de lien, tels que la couleur et les transitions.
+                -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 
+            Conteneur pour une carte spécifique.
+            La classe "container" centre et organise les éléments à l'intérieur avec flexbox.
+        -->
+        <div class="card" style="--clr:#03a9f4">
+            <!-- 
+                Carte individuelle avec une couleur de fond spécifique.
+                La variable CSS "--clr" définit la couleur personnalisée pour cette carte.
+            -->
+            <div class="imgbx">
+                <!-- 
+                    Conteneur pour l'image de la carte.
+                    La classe "imgbx" applique des styles pour positionner et dimensionner l'image.
+                -->
+                <img src="imageastro/cosm.jpg" alt="Image related to cosmology">
+                <!-- 
+                    Image représentant la cosmologie.
+                    L'attribut alt fournit une description alternative de l'image pour l'accessibilité.
+                -->
+            </div>
+            <div class="content">
+                <!-- 
+                    Conteneur pour le contenu textuel de la carte.
+                    La classe "content" applique des styles pour le texte et les liens.
+                -->
+                <h2>Cosmology</h2>
+                <!-- Titre de la carte décrivant le type d'astronomie. -->
+                <p>Studies the universe's origin, evolution, fate, and topics as the Big Bang, dark matter, and energy.</p>
+                <!-- 
+                    Paragraphe décrivant la cosmologie.
+                    Ce texte explique comment la cosmologie étudie l'origine, l'évolution et le destin de l'univers.
+                -->
+                <a href="#">Read more</a>
+                <!-- 
+                    Lien pour en savoir plus sur la cosmologie.
+                    La classe "btn" applique des styles de lien, tels que la couleur et les transitions.
+                -->
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<section class="heros reveal">
+    <!-- 
+        Section principale pour les héros.
+        La classe "heros" définit le style général de cette section.
+        La classe "reveal" est utilisée pour l'animation d'apparition.
+    -->
+    <div class="ctas container">
+        <!-- 
+            Conteneur pour les appels à l'action (CTAs).
+            La classe "container" centre et organise les éléments à l'intérieur avec flexbox.
+        -->
+        <div class="left-section">
+            <!-- 
+                Section de gauche pour l'image.
+                La classe "left-section" applique des styles spécifiques à cette section.
+            -->
+            <img src="imageastro/astronautg.png" alt="Astronaut Image">
+            <!-- 
+                Image d'un astronaute.
+                L'attribut alt fournit une description alternative de l'image pour l'accessibilité.
+            -->
+        </div>
+        <div class="left-section">
+            <!-- 
+                Deuxième section de gauche pour le texte et les informations.
+                La classe "left-section" applique des styles spécifiques à cette section.
+            -->
+            <div class="banner-text">
+                <!-- 
+                    Conteneur pour le texte de la bannière.
+                    La classe "banner-text" applique des styles pour le texte et les titres.
+                -->
+                <div class="title">
+                    <!-- 
+                        Conteneur pour le titre de la section.
+                        La classe "title" applique des styles spécifiques pour le titre.
+                    -->
+                    <h5>SINCE WHEN?</h5>
+                    <!-- Titre principal pour cette section. -->
+                    <p class="tete">ONE OF THE OLDEST SCIENCES</p>
+                    <!-- Sous-titre ou tête pour cette section. -->
+                </div>
+                <div class="informations">
+                    <!-- 
+                        Conteneur pour les informations supplémentaires.
+                        La classe "informations" applique des styles pour les paragraphes de texte.
+                    -->
+                    <p>Throughout history, astronomy has been a journey of discovery, from early civilizations mapping the stars to modern space exploration. Pioneering astronomers like Copernicus and Galileo revolutionized our understanding, laying the groundwork for space missions that continue to unveil the mysteries of the universe today.</p>
+                    <!-- 
+                        Paragraphe décrivant l'histoire de l'astronomie.
+                        Ce texte explique comment l'astronomie a évolué au fil du temps.
+                    -->
+                </div>
+            </div>
+            <button class="btn btn-primary">Read More</button>
+            <!-- 
+                Bouton pour en savoir plus.
+                La classe "btn btn-primary" applique des styles pour le bouton, tels que la couleur et les transitions.
+            -->
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    // 
+    // Ajout d'un écouteur d'événements pour l'événement de défilement de la fenêtre.
+    // Lorsque l'utilisateur fait défiler la page, la fonction "reveal" est appelée.
+    //
+    window.addEventListener('scroll', reveal);
+
+    // 
+    // Fonction "reveal" pour gérer l'apparition des éléments lors du défilement.
+    // Cette fonction ajoute ou retire la classe "active" des éléments avec la classe "reveal".
+    //
+    function reveal() {
+        // Sélectionne tous les éléments avec la classe "reveal".
+        var reveals = document.querySelectorAll('.reveal');
+
+        // Boucle à travers chaque élément "reveal".
+        for (var i = 0; i < reveals.length; i++) {
+            // Obtient la hauteur de la fenêtre actuelle.
+            var windowHeight = window.innerHeight;
+
+            // Obtient la position du haut de l'élément par rapport à la fenêtre.
+            var revealTop = reveals[i].getBoundingClientRect().top;
+
+            // Point de déclenchement pour l'apparition.
+            var revealPoint = 150;
+
+            // Si la position du haut de l'élément est inférieure au point de déclenchement, ajoute la classe "active".
+            if (revealTop < windowHeight - revealPoint) {
+                reveals[i].classList.add('active');
+            } else {
+                // Sinon, retire la classe "active".
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+</script>
+
+
+<div class="swiper mySwiper">
+    <!-- 
+        Conteneur principal pour le composant Swiper.
+        La classe "swiper" est nécessaire pour initialiser le Swiper.
+        La classe "mySwiper" est un identifiant personnalisé pour ce Swiper.
+    -->
+    <div class="swiper-wrapper">
+        <!-- 
+            Conteneur pour les diapositives Swiper.
+            La classe "swiper-wrapper" englobe toutes les diapositives.
+        -->
+        <div class="swiper-slide"><img src="imageastro/galaxy01.jpg" alt="Galaxy Image 1"></div>
+        <!-- Diapositive individuelle avec une image. -->
+        <div class="swiper-slide"><img src="imageastro/galaxy02.jpg" alt="Galaxy Image 2"></div>
+        <!-- Diapositive individuelle avec une image. -->
+        <div class="swiper-slide"><img src="imageastro/galaxy03.jpg" alt="Galaxy Image 3"></div>
+        <!-- Diapositive individuelle avec une image. -->
+        <div class="swiper-slide"><img src="imageastro/galaxy4.jpg" alt="Galaxy Image 4"></div>
+        <!-- Diapositive individuelle avec une image. -->
+        <div class="swiper-slide"><img src="imageastro/galaxy5.jpg" alt="Galaxy Image 5"></div>
+        <!-- Diapositive individuelle avec une image. -->
+        <div class="swiper-slide"><img src="imageastro/galaxy6.jpg" alt="Galaxy Image 6"></div>
+        <!-- Diapositive individuelle avec une image. -->
+        <!-- Répétition des diapositives pour créer un effet de boucle. -->
+        <div class="swiper-slide"><img src="imageastro/galaxy01.jpg" alt="Galaxy Image 1"></div>
+        <div class="swiper-slide"><img src="imageastro/galaxy02.jpg" alt="Galaxy Image 2"></div>
+        <div class="swiper-slide"><img src="imageastro/galaxy03.jpg" alt="Galaxy Image 3"></div>
+        <div class="swiper-slide"><img src="imageastro/galaxy4.jpg" alt="Galaxy Image 4"></div>
+        <div class="swiper-slide"><img src="imageastro/galaxy5.jpg" alt="Galaxy Image 5"></div>
+        <div class="swiper-slide"><img src="imageastro/galaxy6.jpg" alt="Galaxy Image 6"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <!-- Bouton pour passer à la diapositive suivante. -->
+    <div class="swiper-button-prev"></div>
+    <!-- Bouton pour revenir à la diapositive précédente. -->
+    <div class="swiper-pagination"></div>
+    <!-- Pagination pour naviguer entre les diapositives. -->
+    <div class="autoplay-progress">
+        <!-- 
+            Conteneur pour le cercle de progression de l'autoplay.
+            Affiche le temps restant avant le changement de diapositive.
+        -->
+        <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="20"></circle>
+            <!-- Cercle SVG pour représenter la progression du temps. -->
+        </svg>
+        <span></span>
+        <!-- Conteneur pour le texte du temps restant. -->
+    </div>
+</div>
+
+<!-- Inclusion de la bibliothèque Swiper JS depuis un CDN. -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialisation du composant Swiper avec des options personnalisées. -->
+<script>
+    // Sélectionne les éléments de progression de l'autoplay.
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    
+    // Initialisation d'un nouveau Swiper avec les options fournies.
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        // Espace entre les diapositives.
+        centeredSlides: true,
+        // Centre les diapositives dans le conteneur Swiper.
+        autoplay: {
+            delay: 2500,
+            // Délai entre les changements de diapositives en millisecondes.
+            disableOnInteraction: false
+            // Ne pas désactiver l'autoplay lors de l'interaction avec le Swiper.
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+            // Pagination cliquable pour naviguer entre les diapositives.
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+            // Boutons de navigation pour avancer ou reculer entre les diapositives.
+        },
+        on: {
+            autoplayTimeLeft(s, time, progress) {
+                // Mise à jour du cercle de progression de l'autoplay.
+                progressCircle.style.setProperty("--progress", 1 - progress);
+                // Mise à jour du texte avec le temps restant.
+                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+            }
+        }
+    });
+</script>
+<!-- Conteneur principal pour la section des types d'astronomie -->
+<div class="types1 reveal">
+    <!-- Premier conteneur pour une carte d'astronaute -->
+    <div class="container1">
+        <!-- Carte d'astronaute avec une couleur de fond personnalisée -->
+        <div class="card1" style="--clr:#009688">
+            <!-- Face avant de la carte avec l'image de l'astronaute Michael Reed Barratt -->
+            <div class= "front">
+                <img src="imageastro/astronaut.jpg" alt="Michael Reed Barratt">
+                <!-- Image de l'astronaute Michael Reed Barratt -->
+            </div>
+            <!-- Face arrière de la carte avec les informations sur l'astronaute -->
+            <div class="back">
+                <h2>Michael Reed Barratt</h2>
+                <!-- Nom de l'astronaute -->
+                <p>He was selected as a NASA astronaut in 2000. In 2009, he served as a flight engineer on the International Space Station as part of Expedition 19 and 20.</p>
+                <!-- Informations sur l'astronaute Michael Reed Barratt -->
+            </div>
+        </div>
+    </div>
+    <!-- Fin du premier conteneur pour une carte d'astronaute -->
+
+    <!-- Répétition similaire pour les autres cartes d'astronautes qu'on va faire -->
+    <!-- Les trois cartes suivantes sont identiques en structure, mais avec des données différentes pour chaque astronaute -->
+
+<!-- Deuxième conteneur pour une carte d'astronaute -->
+<div class="container1">
+    <!-- Carte d'astronaute avec une couleur de fond personnalisée -->
+    <div class="card1" style="--clr:#009688">
+        <!-- Face avant de la carte avec l'image de l'astronaute Edward Michael -->
+        <div class= "front">
+            <img src="imageastro/astronau4.jpg" alt="Edward Michael">
+            <!-- Image de l'astronaute Edward Michael -->
+        </div>
+        <!-- Face arrière de la carte avec les informations sur l'astronaute -->
+        <div class="back">
+            <h2>Edward Michael</h2>
+            <!-- Nom de l'astronaute -->
+            <p>He“Mike” Fincke was selected as a NASA astronaut in 1996 and is preparing to launch to the International Space Station as pilot of NASA’s Boeing Starliner-1 Mission.</p>
+            <!-- Informations sur l'astronaute Edward Michael -->
+        </div>
+    </div>
+</div>
+<!-- Fin du deuxième conteneur pour une carte d'astronaute -->
+   
+   <!-- Troisième conteneur pour une carte d'astronaute -->
+<div class="container1">
+    <!-- Carte d'astronaute avec une couleur de fond personnalisée -->
+    <div class="card1" style="--clr:#009688">
+        <!-- Face avant de la carte avec l'image de l'astronaute Kate Rubins -->
+        <div class= "front">
+            <img src="imageastro/astrau3.jpg" alt="Kate Rubins">
+            <!-- Image de l'astronaute Kate Rubins -->
+        </div>
+        <!-- Face arrière de la carte avec les informations sur l'astronaute -->
+        <div class="back">
+            <h2>Kate Rubins</h2>
+            <!-- Nom de l'astronaute -->
+            <p>She was selected as a NASA astronaut in 2009 and most recently served as a flight engineer on the International Space Station for Expedition 63 and 64.</p>
+            <!-- Informations sur l'astronaute Kate Rubins -->
+        </div>
+    </div>
+</div>
+<!-- Fin du troisième conteneur pour une carte d'astronaute -->
+
+<!-- Quatrième conteneur pour une carte d'astronaute -->
+<div class="container1">
+    <!-- Carte d'astronaute avec une couleur de fond personnalisée -->
+    <div class="card1" style="--clr:#009688">
+        <!-- Face avant de la carte avec l'image de l'astronaute Shane Kimbrough -->
+        <div class= "front">
+            <img src="imageastro/astronau6.jpg" alt="Shane Kimbrough">
+            <!-- Image de l'astronaute Shane Kimbrough -->
+        </div>
+        <!-- Face arrière de la carte avec les informations sur l'astronaute -->
+        <div class="back">
+            <h2>Shane Kimbrough</h2>
+            <!-- Nom de l'astronaute -->
+            <p>He was selected as an astronaut by NASA in 2004. He completed his first spaceflight in 2008 from the space shuttle Endeavour to the space station on the STS-126 mission.</p>
+            <!-- Informations sur l'astronaute Shane Kimbrough -->
+        </div>
+    </div>
+</div>
+</div>
+<!-- Fin du quatrième conteneur pour une carte d'astronaute -->
+
+
+
+             <!-- footer section start here -->
+             <footer>
+                <!-- Informations sur le site et liens vers les réseaux sociaux -->
+                <div class="container">
+                    <div class="copyright">
+                        <!-- Logo et année du site -->
+                        <div>
+                            <a href="Home.html" class="logo"><i class="fas fa-rocket"></i>astro.</a>
+                        </div>
+                        <center><span>2024 website</span></center> <!-- Année du site -->
+                    </div>
+                    <!-- À propos de nous -->
+                    <div>
+                        <h1>About us</h1>
+                        <ul>
+                            <!-- Liens vers les pages -->
+                            <li><a href="#ourteam">WHO WE ARE: <br>Second-year students in computer science</a></li>
+                            <li><a href="#ourteam">CONTACT US:</a></li>
+                            <li><a href="https://www.univ-alger.dz/">FACULTY:<br>University Of Algiers 1</a></li> <!-- Description de l'équipe -->
+                            <!-- ... -->
+                        </ul>
+                    </div>
+                    <!-- Adresses e-mail -->
+                    <div id="Email">
+                        <h1>Email addresses</h1>
+                        <ul>
+                            <!-- Liste des adresses e-mail -->
+                            <li><a href="#">khodjasersoura@gmail.com</a></li>
+                            <li><a href="#">bhlhadjer8@gmail.com</a></li>
+                            <li><a href="#">boulbairmanal0@gmail.com</a></li>
+                            <li><a href="#">hibaboulaloua@gmail.com</a></li>
+                            <!-- ... -->
+                        </ul>
+                    </div>
+                    <!-- Liens vers les réseaux sociaux -->
+                    <div class="socials">
+                        <div class="footer-socials">
+                            <h1>Socials</h1>
+                            <!-- Liens vers les réseaux sociaux -->
+                            <a href="#"><img class="image" src="image/fb-removebg-preview.png"></a>
+                            <a href="#"><img src="image/xt-removebg-preview.png"></a>
+                            <a href="#"><img src="image/instagram-fill.svg"></a>
+                            <a href="#"><img src="image/mail-line.svg"></a>
+                        </div>
+                    </div>
+                </div>
+              </footer>   
+      <!--loader part -->
+           
+      <div class="loader-container">
+        <div class="circle01" style="--clr:#8f5822"></div>
+        <div class="circle01 circle02" style="--clr:#4439de"></div>
+        <div class="circle01 circle03" style="--clr:#832dac"></div>
+    </div>
+
+    <script>
+       // Fonction pour masquer le loader
+function loader(){
+    document.querySelector('.loader-container').classList.add('fade-out'); // Ajoute la classe 'fade-out' au conteneur du loader
+}
+
+// Fonction pour déclencher le masquage du loader après un certain délai
+function fadeOut(){
+    setInterval(loader, 2000); // Exécute la fonction loader toutes les 2 secondes
+}
+
+window.onload = fadeOut; // Lance la fonction fadeOut lorsque la fenêtre est chargée
+
+   
+    </script>
+
+</body>
+</html>

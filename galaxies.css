@@ -1,0 +1,833 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://use.fontawesome.com/release/v6.5.1/css/all.css");
+
+* {
+    text-decoration: none; /* Supprime les soulignements des textes et liens */
+    outline: none; /* Supprime les contours des éléments lors de la sélection */
+    border: none; /* Supprime les bordures par défaut des éléments */
+    text-transform: capitalize; /* Transforme la première lettre de chaque mot en majuscule */
+    transition: all .2s linear; /* Ajoute une transition fluide sur toutes les propriétés avec une durée de 0.2 secondes */
+    padding: 0; /* Réinitialise le padding par défaut */
+    margin: 0; /* Réinitialise la marge par défaut */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans les dimensions totales de l'élément */
+    -webkit-font-smoothing: antialiased; /* Améliore le rendu du texte dans les navigateurs WebKit */
+}
+
+html {
+    font-size: 62.5%; /* Définit la taille de police de base à 62.5% (10px) pour des calculs rem plus simples */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    scroll-padding-top: 5.5rem; /* Ajoute un espacement en haut lors du défilement pour les ancres */
+    scroll-behavior: smooth; /* Ajoute un défilement fluide lors de la navigation interne */
+}
+
+#video-bg2 {
+    position: fixed; /* Fixe la vidéo en arrière-plan */
+    right: 0; /* Aligne la vidéo à droite */
+    bottom: 0; /* Aligne la vidéo en bas */
+    min-width: 100%; /* Assure que la vidéo couvre toute la largeur */
+    min-height: 100%; /* Assure que la vidéo couvre toute la hauteur */
+    z-index: -1; /* Place la vidéo derrière tout le contenu */
+    background: transparent; /* Rend l'arrière-plan de la vidéo transparent */
+}
+
+body {
+    padding: 0px; /* Supprime le padding par défaut du corps */
+    margin: 0px; /* Supprime la marge par défaut du corps */
+    color: var(--pure); /* Définit la couleur du texte en utilisant une variable CSS */
+}
+
+.header1 {
+    position: fixed; /* Fixe la barre de navigation en haut */
+    top: 0; /* Aligne la barre de navigation en haut */
+    left: 0; /* Aligne la barre de navigation à gauche */
+    right: 0; /* Aligne la barre de navigation à droite */
+    background-size: cover; /* Assure que l'arrière-plan couvre toute la barre de navigation */
+    background-position: center; /* Centre l'arrière-plan */
+    height: 100px; /* Définit une hauteur fixe pour la barre de navigation */
+    padding: 1rem; /* Ajoute un padding autour de la barre de navigation */
+    display: flex; /* Utilise un conteneur flex pour aligner les éléments */
+    align-items: center; /* Aligne les éléments au centre verticalement */
+    justify-content: space-between; /* Espacie les éléments de manière égale */
+    z-index: 1000; /* Assure que la barre de navigation reste au-dessus du contenu */
+    box-shadow: var(--box-shadow); /* Ajoute une ombre à la barre de navigation pour améliorer sa qualité visuelle */
+    text-align: center; /* Centre le texte dans la barre de navigation */
+}
+
+.header2 {
+    min-height: 100vh; /* Assure que la section couvre au moins toute la hauteur de la fenêtre */
+    background-size: cover; /* Assure que l'arrière-plan couvre toute la section */
+    margin-bottom: -16%; /* Ajoute une marge négative en bas */
+}
+
+.header1 .navbar a {
+    font-size: 1.7rem; /* Définit la taille de la police pour les liens de navigation */
+    border-radius: 4.5rem; /* Arrondit les coins des liens de navigation */
+    padding: .6rem 1.5rem; /* Ajoute du padding autour des liens de navigation */
+}
+
+.header1 .logo {
+    color: #ffffff; /* Définit la couleur du logo en blanc */
+    font-size: 2rem; /* Définit la taille de la police pour le logo */
+    font-weight: bolder; /* Rend le logo en gras */
+}
+
+.header1 .icons #menu-bars {
+    display: none; /* Cache l'icône du menu */
+}
+
+#search-form {
+    position: fixed; /* Fixe le formulaire de recherche */
+    top: -110%; /* Cache le formulaire de recherche en dehors de l'écran */
+    left: 0; /* Aligne le formulaire de recherche à gauche */
+    height: 100%; /* Assure que le formulaire de recherche couvre toute la hauteur */
+    width: 100%; /* Assure que le formulaire de recherche couvre toute la largeur */
+    z-index: 1004; /* Place le formulaire de recherche au-dessus du contenu */
+    background: rgba(0,0,0,.8); /* Ajoute un fond semi-transparent noir */
+    display: flex; /* Utilise un conteneur flex pour aligner les éléments */
+    align-items: center; /* Aligne les éléments au centre verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+    padding: 0 1rem; /* Ajoute un padding horizontal */
+}
+
+#search-form.active {
+    top: 0; /* Affiche le formulaire de recherche en le ramenant en haut */
+}
+
+#search-form #search-box {
+    width: 50rem; /* Définit une largeur fixe pour la boîte de recherche */
+    border-bottom: .1rem solid #fff; /* Ajoute une bordure en bas de la boîte de recherche */
+    padding: 1rem 0; /* Ajoute un padding vertical */
+    color: #fff; /* Définit la couleur du texte en blanc */
+    font-size: 3rem; /* Définit la taille de la police pour la boîte de recherche */
+    text-transform: none; /* Désactive la transformation du texte */
+    background: none; /* Supprime l'arrière-plan de la boîte de recherche */
+}
+
+
+#search-form #search-box::placeholder {
+    color: #eee; /* Définit la couleur du texte du placeholder à un gris clair */
+}
+
+#search-form #search-box::-webkit-search-cancel-button {
+    -webkit-appearance: none; /* Supprime l'apparence par défaut du bouton d'annulation de recherche sur les navigateurs WebKit */
+}
+
+#search-form label {
+    color: #fff; /* Définit la couleur du texte du label en blanc */
+    cursor: pointer; /* Change le curseur en pointeur lors du survol */
+    font-size: 3rem; /* Définit la taille de la police du label */
+}
+
+#search-form label:hover {
+    color: var(--green); /* Change la couleur du texte en vert lors du survol */
+}
+
+#search-form #close {
+    position: absolute; /* Positionne l'élément de manière absolue par rapport à son conteneur */
+    color: #fff; /* Définit la couleur du texte en blanc */
+    cursor: pointer; /* Change le curseur en pointeur lors du survol */
+    top: 2rem; /* Positionne l'élément à 2rem du haut */
+    right: 3rem; /* Positionne l'élément à 3rem de la droite */
+    font-size: 5rem; /* Définit la taille de la police pour le bouton de fermeture */
+}
+
+header .icons #search-icon,
+header .icons #fa-user {
+    cursor: pointer; /* Change le curseur en pointeur lors du survol */
+    height: 4.5rem; /* Définit la hauteur de l'icône */
+    line-height: 4.5rem; /* Centre le texte verticalement */
+    width: 1.45rem; /* Définit la largeur de l'icône */
+    text-align: center; /* Centre le texte horizontalement */
+    font-size: 1.4rem; /* Définit la taille de la police de l'icône */
+    color: white; /* Définit la couleur du texte en blanc */
+    border-radius: 60%; /* Arrondit les coins de l'icône */
+    background-color: rgba(0, 0, 0, 0.879); /* Définit une couleur de fond semi-transparente */
+    margin-left: 15px; /* Ajoute une marge à gauche */
+    margin-inline-end: 15px; /* Ajoute une marge à droite pour les langues de gauche à droite */
+}
+
+header .icons #search-icon:hover,
+header .icons #fa-user:hover {
+    color: #ffffff; /* Définit la couleur du texte en blanc lors du survol */
+    background: #192a56; /* Change la couleur de fond lors du survol */
+    transform: rotate(360deg); /* Effectue une rotation de 360 degrés lors du survol */
+    z-index: 10; /* Place l'élément au-dessus des autres en augmentant son z-index */
+}
+
+.header1 .navbar a.active,
+.header1 .navbar a:hover {
+    background: rgba(0, 0, 0, 0.721); /* Définit une couleur de fond semi-transparente noire lors du survol ou lorsque le lien est actif */
+}
+
+.planet-row {
+    display: flex; /* Affiche les éléments enfants en ligne */
+}
+
+.planet-container {
+    position: relative; /* Positionne les éléments enfants par rapport à cet élément */
+    display: flex; /* Affiche les éléments enfants en ligne */
+    align-items: center; /* Centre les éléments enfants verticalement */
+}
+
+.moonearthsun {
+    width: 40px; /* Définit la largeur de l'image */
+    transition: transform 0.6s ease; /* Ajoute une transition douce pour la transformation */
+    vertical-align: middle; /* Aligne l'image verticalement au milieu */
+    margin-right: 5px; /* Ajoute une marge à droite de l'image */
+}
+
+.planet span {
+    opacity: 0; /* Rends le texte invisible par défaut */
+    position: absolute; /* Positionne le texte par rapport à son conteneur parent */
+    top: 25%; /* Positionne le texte à 25% du haut du conteneur */
+    left: 50%; /* Centre le texte horizontalement */
+    transform: translateX(-50%); /* Centre le texte horizontalement avec un ajustement */
+    padding: .5rem 1.5rem; /* Ajoute du padding autour du texte */
+    border-radius: 5.5rem; /* Arrondit les coins du texte */
+    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+    color: white; /* Définit la couleur du texte en blanc */
+    transition: opacity .8s ease; /* Ajoute une transition douce pour l'opacité */
+}
+
+.planet:hover span {
+    opacity: 1; /* Rend le texte visible au survol */
+    animation: slide .5s forwards; /* Ajoute une animation de glissement au survol */
+}
+
+.planet-container:hover .moonearthsun {
+    animation: slide .8s forwards; /* Ajoute une animation de glissement au survol */
+    transform: translateX(70px); /* Glisse l'image de 70 pixels vers la droite au survol */
+}
+
+.planet-container .planet {
+    animation: slide .5s forwards; /* Ajoute une animation de glissement par défaut */
+    width: 120px; /* Définit la largeur de l'élément planet */
+}
+
+.planet-container:hover .planet {
+    animation: slide 1s forwards; /* Ajoute une animation de glissement de 1 seconde au survol */
+}
+
+.planet-container i {
+    color: black; /* Définit la couleur des icônes en noir */
+}
+
+section {
+    height: 100vh; /* Définit la hauteur de la section à 100% de la hauteur de la fenêtre */
+    align-items: center; /* Centre les éléments enfants verticalement */
+    justify-content: 106px; /* Centre les éléments enfants horizontalement avec un espace de 106 pixels */
+    text-transform: uppercase; /* Transforme le texte en majuscules */
+    font-weight: bold; /* Définit la police en gras */
+}
+
+
+.hero .cta {
+    display: flex; /* Affiche les éléments enfants en ligne */
+    align-items: center; /* Centre les éléments enfants verticalement */
+    justify-content: space-between; /* Espace les éléments enfants avec un espace égal */
+    min-height: calc(100vh - 80px); /* Définit une hauteur minimale en soustrayant 80px de la hauteur de la fenêtre */
+}
+
+.hero .cta .banner-text {
+    font-weight: 400; /* Définit une police de poids normal */
+    font-size: 18px; /* Définit la taille de la police */
+    line-height: 1.7; /* Définit la hauteur de ligne */
+    margin-bottom: 30px; /* Ajoute une marge en bas */
+    color: white; /* Définit la couleur du texte en blanc */
+    margin-right: 8%; /* Ajoute une marge à droite */
+    text-align: justify; /* Justifie le texte */
+}
+
+.banner-text .title {
+    margin-bottom: 10%; /* Ajoute une marge en bas */
+}
+
+.banner-text h5 {
+    color: rgb(174, 163, 163); /* Définit la couleur du texte */
+    font-size: 130%; /* Définit la taille de la police */
+}
+
+.hero .cta > div {
+    flex: 1; /* Définit l'élément pour qu'il prenne tout l'espace disponible */
+}
+
+.hero .cta .left-section {
+    padding: 0 60px 0 30px; /* Ajoute du padding sur les côtés droit et gauche */
+}
+
+.btn {
+    padding: 8px 30px; /* Ajoute du padding à l'intérieur du bouton */
+    border: 1px solid transparent; /* Définit une bordure transparente */
+    border-radius: 50px; /* Arrondit les coins de la bordure */
+    outline: none; /* Supprime le contour par défaut */
+    cursor: pointer; /* Change le curseur en pointeur */
+    font-size: 16px; /* Définit la taille de la police */
+    transition: all .5s ease-in-out; /* Ajoute une transition douce pour toutes les propriétés */
+}
+
+.btn-primary {
+    color: rgb(0, 0, 0); /* Définit la couleur du texte en noir */
+    background: rgb(255, 255, 255); /* Définit la couleur de fond en blanc */
+}
+
+.btn-primary:hover {
+    background: transparent; /* Rend le fond transparent au survol */
+    color: white; /* Change la couleur du texte en blanc au survol */
+    border-color: white; /* Change la couleur de la bordure en blanc au survol */
+}
+
+.hero .cta .right-section img {
+    height: 70vh; /* Définit la hauteur de l'image */
+    transform: rotate(20deg); /* Fait pivoter l'image de 20 degrés */
+    animation: moveInSpace 12s ease-in-out infinite alternate; /* Applique une animation pour faire bouger l'image dans l'espace */
+}
+
+@keyframes moveInSpace {
+    50% {
+       transform: translateY(100px) rotate(-30deg) scale(0.8); /* Déplace, fait pivoter et réduit l'image à 50% de l'animation */
+    }
+}
+
+.types {
+    position: relative; /* Positionne l'élément relativement à son parent */
+    display: flex; /* Affiche les éléments enfants en ligne */
+    justify-content: center; /* Centre les éléments enfants horizontalement */
+    align-items: center; /* Centre les éléments enfants verticalement */
+    min-height: 100vh; /* Définit une hauteur minimale de 100% de la hauteur de la fenêtre */
+    margin-bottom: -11%; /* Ajoute une marge négative en bas */
+}
+
+.container {
+    display: flex; /* Affiche les éléments enfants en ligne */
+    justify-content: center; /* Centre les éléments enfants horizontalement */
+    align-items: center; /* Centre les éléments enfants verticalement */
+    flex-wrap: row; /* Permet aux éléments de se répartir sur plusieurs lignes */
+    gap: 100px 50px; /* Définit un écart entre les éléments de 100px horizontalement et 50px verticalement */
+    padding: 10px 20px; /* Ajoute un padding autour du conteneur */
+}
+
+.container .card {
+    position: relative; /* Positionne l'élément relativement à son parent */
+    display: flex; /* Affiche les éléments enfants en ligne */
+    justify-content: center; /* Centre les éléments enfants horizontalement */
+    align-items: flex-start; /* Aligne les éléments enfants au début verticalement */
+    width: 240px; /* Définit une largeur de 240px */
+    height: 215px; /* Définit une hauteur de 215px */
+    background: #000000; /* Définit la couleur de fond en noir */
+    border-radius: 20px; /* Arrondit les coins */
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15); /* Ajoute une ombre */
+    transition: 0.5s; /* Ajoute une transition de 0,5 secondes */
+}
+
+.container .card:hover {
+    height: 290px; /* Augmente la hauteur lors du survol */
+}
+
+.container .card .imgbx {
+    position: absolute; /* Positionne l'élément absolument par rapport à son parent */
+    top: 20px; /* Positionne l'élément à 20px du haut */
+    width: 205px; /* Définit une largeur de 205px */
+    height: 146px; /* Définit une hauteur de 146px */
+    background-color: #333; /* Définit la couleur de fond */
+    overflow: hidden; /* Cache le débordement */
+    transition: 0.5s; /* Ajoute une transition de 0,5 secondes */
+}
+
+.container .card:hover .imgbx {
+    top: -5px; /* Change la position top lors du survol */
+    scale: 0.8; /* Réduit la taille à 80% lors du survol */
+    box-shadow: 0 15px 45px rgba(0,0,0,0.2); /* Ajoute une ombre lors du survol */
+}
+
+.container .card .imgbx img {
+    position: absolute; /* Positionne l'image absolument par rapport à son parent */
+    top: 0; /* Positionne l'image en haut */
+    left: 0; /* Positionne l'image à gauche */
+    width: 100%; /* Définit la largeur de l'image à 100% du parent */
+    height: 100%; /* Définit la hauteur de l'image à 100% du parent */
+    object-fit: cover; /* Adapte l'image pour couvrir l'ensemble de son parent */
+}
+
+.container .card .content {
+    position: absolute; /* Positionne l'élément absolument par rapport à son parent */
+    top: 173px; /* Positionne l'élément à 173px du haut */
+    width: 240px; /* Définit une largeur de 240px */
+    padding: 0 30px; /* Ajoute un padding de 30px sur les côtés */
+    height: 30px; /* Définit une hauteur de 30px */
+    overflow: hidden; /* Cache le débordement */
+    text-align: center; /* Centre le texte */
+    transition: 0.5s; /* Ajoute une transition de 0,5 secondes */
+}
+
+.container .card:hover .content {
+    top: 130px; /* Change la position top lors du survol */
+    height: 250px; /* Augmente la hauteur lors du survol */
+}
+
+.container .card .content h2 {
+    font-size: 1.2em; /* Définit la taille de la police */
+    margin-bottom: 6px; /* Ajoute une marge en bas */
+    white-space: nowrap; /* Empêche le texte de se répartir sur plusieurs lignes */
+    text-align: center; /* Centre le texte */
+    font-weight: 700; /* Définit la police en gras */
+    color: rgb(255, 255, 255); /* Définit la couleur du texte en blanc */
+}
+
+.container .card .content p {
+    color: #ffffff; /* Définit la couleur du texte en blanc */
+    font-size: 1.05em; /* Définit la taille de la police */
+    text-align: center; /* Centre le texte */
+    margin-bottom: 3px; /* Ajoute une marge en bas */
+}
+
+.container .card .content a {
+    text-decoration: none; /* Supprime la décoration du texte */
+    display: inline-block; /* Affiche l'élément en ligne */
+    padding: 12px 25px; /* Ajoute du padding */
+    background-color: rgb(112, 105, 105); /* Définit la couleur de fond */
+    color: #fff; /* Définit la couleur du texte en blanc */
+    font-size: 500; /* Définit la taille de la police */
+    border-radius: 8px; /* Arrondit les coins */
+}
+
+.heros .ctas {
+    display: flex; /* Affiche les éléments enfants en ligne */
+    align-items: center; /* Centre les éléments enfants verticalement */
+    justify-content: space-between; /* Espace les éléments enfants avec un espace égal */
+    min-height: calc(100vh - 80px); /* Définit une hauteur minimale en soustrayant 80px de la hauteur de la fenêtre */
+}
+
+.heros .ctas .banner-text {
+    font-weight: 400; /* Définit une police de poids normal */
+    font-size: 18px; /* Définit la taille de la police */
+    line-height: 1.7; /* Définit la hauteur de ligne */
+    margin-bottom: 30px; /* Ajoute une marge en bas */
+    color: white; /* Définit la couleur du texte en blanc */
+    margin-right: 8%; /* Ajoute une marge à droite */
+    text-align: justify; /* Justifie le texte */
+}
+
+.banner-text .title {
+    margin-bottom: 10%; /* Ajoute une marge en bas */
+}
+
+.banner-text h5 {
+    color: rgb(174, 163, 163); /* Définit la couleur du texte */
+    font-size: 130%; /* Définit la taille de la police */
+}
+
+.heros .ctas > div {
+    flex: 1; /* Définit l'élément pour qu'il prenne tout l'espace disponible */
+}
+
+.heros .ctas .left-section {
+    padding: 0 60px 0 30px; /* Ajoute du padding sur les côtés droit et gauche */
+}
+
+.heros .ctas .left-section img {
+    height: 70vh; /* Définit la hauteur de l'image */
+    transform: rotate(20deg); /* Fait pivoter l'image de 20 degrés */
+    animation: moveInSpace 12s ease-in-out infinite alternate; /* Applique une animation pour faire bouger l'image dans l'espace */
+}
+
+@keyframes moveInSpace {
+    50% {
+       transform: translateY(100px) rotate(-30deg) scale(0.8); /* Déplace, fait pivoter et réduit l'image à 50% de l'animation */
+    }
+}
+
+.swiper {
+    width: 100%; /* Définit la largeur du conteneur swiper à 100% */
+    height: 100%; /* Définit la hauteur du conteneur swiper à 100% */
+    margin-top: 4%; /* Ajoute une marge en haut */
+}
+
+.swiper-slide {
+    text-align: center; /* Centre le texte */
+    font-size: 18px; /* Définit la taille de la police */
+    background: #fff; /* Définit la couleur de fond en blanc */
+    display: flex; /* Affiche les éléments enfants en ligne */
+    justify-content: center; /* Centre les éléments enfants horizontalement */
+    align-items: center; /* Centre les éléments enfants verticalement */
+}
+
+.swiper-slide img {
+    display: block; /* Affiche l'image en tant qu'élément de bloc */
+    width: 100%; /* Définit la largeur de l'image à 100% du parent */
+    height: 100%; /* Définit la hauteur de l'image à 100% du parent */
+    object-fit: cover; /* Adapte l'image pour couvrir l'ensemble de son parent */
+}
+
+.autoplay-progress {
+    position: absolute; /* Positionne l'élément absolument par rapport à son parent */
+    right: 16px; /* Positionne l'élément à 16px de la droite */
+    bottom: 16px; /* Positionne l'élément à 16px du bas */
+    z-index: 10; /* Définit l'ordre de superposition */
+    width: 48px; /* Définit la largeur de l'élément */
+    height: 48px; /* Définit la hauteur de l'élément */
+    display: flex; /* Affiche les éléments enfants en ligne */
+    align-items: center; /* Centre les éléments enfants verticalement */
+    justify-content: center; /* Centre les éléments enfants horizontalement */
+    font-weight: bold; /* Définit la police en gras */
+    color: var(--swiper-theme-color); /* Définit la couleur du texte à partir d'une variable CSS */
+}
+
+.autoplay-progress svg {
+    --progress: 0; /* Définit une variable CSS pour le progrès */
+    position: absolute; /* Positionne l'élément absolument par rapport à son parent */
+    left: 0; /* Positionne l'élément à gauche */
+    top: 0px; /* Positionne l'élément en haut */
+    z-index: 10; /* Définit l'ordre de superposition */
+    width: 100%; /* Définit la largeur à 100% du parent */
+    height: 100%; /* Définit la hauteur à 100% du parent */
+    stroke-width: 4px; /* Définit la largeur du trait */
+    stroke: var(--swiper-theme-color); /* Définit la couleur du trait à partir d'une variable CSS */
+    fill: none; /* Supprime la couleur de remplissage */
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress))); /* Calcule la position du trait en fonction du progrès */
+    stroke-dasharray: 125.6; /* Définit la longueur du trait */
+    transform: rotate(-90deg); /* Fait pivoter l'élément de -90 degrés */
+}
+
+.reveal {
+    position: relative; /* Positionne l'élément relativement à son parent */
+    transform: translateY(140px); /* Translate l'élément de 140px vers le bas */
+    opacity: 0; /* Définit l'opacité à 0 */
+    transition: all 2s ease; /* Ajoute une transition pour toutes les propriétés sur 2 secondes */
+}
+
+.reveal.active {
+    transform: translateY(35px); /* Translate l'élément de 35px vers le bas */
+    opacity: 1; /* Définit l'opacité à 1 */
+}
+
+.types1 {
+    position: relative; /* Positionne l'élément relativement à son parent */
+    display: flex; /* Affiche les éléments enfants en ligne */
+    justify-content: center; /* Centre les éléments enfants horizontalement */
+    align-items: center; /* Centre les éléments enfants verticalement */
+    min-height: 100vh; /* Définit une hauteur minimale de 100% de la hauteur de la fenêtre */
+    margin-bottom: -11%; /* Ajoute une marge négative en bas */
+    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
+    margin-top: -12%; /* Ajoute une marge négative en haut */
+}
+
+.container1 {
+    display: block; /* Affiche les éléments enfants en bloc */
+    justify-content: center; /* Centre les éléments enfants horizontalement */
+    align-items: center; /* Centre les éléments enfants verticalement */
+    gap: 100px 50px; /* Définit un écart entre les éléments de 100px horizontalement et 50px verticalement */
+    padding: 10px 30px; /* Ajoute un padding autour du conteneur */
+}
+
+.container1:hover > .card1 {
+    cursor: pointer; /* Change le curseur en pointeur lors du survol */
+    transform: rotateY(180deg); /* Fait pivoter l'élément de 180 degrés sur l'axe Y lors du survol */
+}
+
+.card1 {
+    height: 270px; /* Définit la hauteur de la carte */
+    width: 240px; /* Définit la largeur de la carte */
+    position: relative; /* Positionne l'élément relativement à son parent */
+    transition: transform 1500ms; /* Ajoute une transition pour la transformation de 1500ms */
+    transform-style: preserve-3d; /* Préserve la transformation 3D */
+}
+
+.front img {
+    height: 270px; /* Définit la hauteur de l'image */
+    width: 240px; /* Définit la largeur de l'image */
+}
+
+.front, .back {
+    height: 270px; /* Définit la hauteur des faces */
+    width: 240px; /* Définit la largeur des faces */
+    border-radius: 9%; /* Arrondit les coins */
+    border-color: white; /* Définit la couleur de la bordure en blanc */
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25); /* Ajoute une ombre */
+    position: absolute; /* Positionne les éléments absolument par rapport à leur parent */
+    backface-visibility: hidden; /* Cache la face arrière lors de la rotation */
+}
+
+.back {
+    background-color: #3a3a3a; /* Définit la couleur de fond */
+    transform: rotateY(180deg); /* Fait pivoter la face arrière de 180 degrés sur l'axe Y */
+    display: flex; /* Affiche les éléments enfants en ligne */
+    flex-direction: column; /* Dispose les éléments enfants en colonne */
+    justify-content: center; /* Centre les éléments enfants verticalement */
+    align-items: center; /* Centre les éléments enfants horizontalement */
+    gap: 29%; /* Ajoute un écart entre les éléments */
+    text-align: justify; /* Justifie le texte */
+}
+
+.back h2 {
+    font-size: 1.2em; /* Définit la taille de la police */
+    text-align: center; /* Centre le texte */
+    font-weight: 400; /* Définit la police de poids normal */
+    color: rgb(255, 255, 255); /* Définit la couleur du texte en blanc */
+    margin-bottom: -20%; /* Ajoute une marge négative en bas */
+}
+
+.back p {
+    margin: 10%; /* Ajoute une marge */
+    color: #ffffff; /* Définit la couleur du texte en blanc */
+    font-size: 100%; /* Définit la taille de la police */
+    text-align: center; /* Centre le texte */
+    text-align: justify; /* Justifie le texte */
+}
+
+/* footer section start here */
+/* Styles généraux pour le pied de page */
+footer {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    background: rgb(0, 0, 0); /* Fond noir pour le pied de page */
+    padding: 60px 0; /* Remplissage en haut et en bas du pied de page */
+    margin-top: 20%; /* Marge en haut du pied de page */
+}
+
+/* Styles pour le logo du pied de page */
+footer .logo {
+    color: #ffffff; /* Couleur du texte du logo */
+    font-size: 4rem; /* Taille de la police du logo */
+    font-weight: bolder; /* Poids de la police du logo */
+}
+
+/* Styles pour la grille de contenu du pied de page */
+footer > div {
+    display: grid; /* Utilisation de CSS Grid pour le contenu */
+    grid-template-columns: repeat(4, 1fr); /* Quatre colonnes de largeur égale */
+}
+
+/* Styles pour le texte de copyright du pied de page */
+footer .copyright span {
+    color: #fff; /* Couleur du texte de copyright */
+    font-size: 12px; /* Taille de la police du texte de copyright */
+    display: inline-block; /* Affichage en ligne du texte de copyright */
+    margin-top: 5px; /* Marge en haut du texte de copyright */
+}
+
+.socials h1{
+    margin-top: -30px;
+}
+
+/* Styles pour les images de copyright dans le pied de page */
+footer .copyright img {
+    height: 30px; /* Hauteur des images de copyright */
+}
+
+/* Styles pour les titres de niveau 1 dans le pied de page */
+footer h1 {
+    font-size: 18px; /* Taille de la police pour les titres */
+    position: relative; /* Positionnement relatif pour les titres */
+    margin-bottom: 30px; /* Marge en bas des titres */
+    color: white; /* Couleur du texte des titres */
+}
+
+/* Styles pour le séparateur après les titres de niveau 1 dans le pied de page */
+footer h1:after {
+    content: ''; /* Contenu vide pour le séparateur */
+    position: absolute; /* Positionnement absolu pour le séparateur */
+    left: 0; /* Positionnement à gauche du séparateur */
+    bottom: -8px; /* Décalage vers le bas du séparateur */
+    display: block; /* Affichage en bloc du séparateur */
+    width: 60px; /* Largeur du séparateur */
+    height: 2px; /* Hauteur du séparateur */
+    background: var(rgb(255, 255, 255)); /* Couleur de fond du séparateur */
+}
+
+/* Styles pour les listes non ordonnées dans le pied de page */
+footer ul {
+    list-style-type: none; /* Suppression des puces de liste */
+}
+
+/* Styles pour les éléments de liste pairs dans le pied de page */
+footer ul li:nth-child(even) {
+    margin: 10px 0; /* Marge des éléments de liste pairs */
+}
+
+/* Styles pour les liens dans le pied de page */
+footer ul li a {
+    color: white; /* Couleur des liens */
+    text-decoration: none; /* Suppression du soulignement des liens */
+    font-size: 14px; /* Taille de la police des liens */
+    transition: all .3s ease-in-out; /* Transition douce pour les changements de style */
+}
+
+footer ul li a:hover {
+    color: white; /* Couleur des liens au survol */
+}
+
+/* Styles pour les icônes de réseaux sociaux dans le pied de page */
+footer .footer-socials a {
+    margin-right: 20px; /* Marge à droite des icônes de réseaux sociaux */
+    font-size: 22px; /* Taille de la police des icônes de réseaux sociaux */
+    color: white; /* Couleur des icônes de réseaux sociaux */
+}
+
+footer .footer-socials img {
+    width: 30px; /* Largeur des icônes de réseaux sociaux */
+    margin: 0 12px; /* Marge autour des icônes de réseaux sociaux */
+    cursor: pointer; /* Curseur de pointeur pour les icônes de réseaux sociaux */
+}
+
+footer .footer-socials a:hover {
+    color:#8f5822; /* Couleur des icônes de réseaux sociaux au survol */
+}
+
+.footer-socials img {
+    width: 30px; /* Largeur des icônes de réseaux sociaux */
+    margin: 0 12px; /* Marge autour des icônes de réseaux sociaux */
+    cursor: pointer; /* Curseur de pointeur pour les icônes de réseaux sociaux */
+}
+
+/* loader part start here */
+/* Conteneur du loader */
+.loader-container{
+    min-height: 100vh; /* Hauteur minimale égale à 100% de la hauteur de la fenêtre */
+    display: flex; /* Utilisation de flexbox pour le centrage vertical et horizontal */
+    justify-content: center; /* Centrage horizontal */
+    background: #272626f7; /* Couleur de fond avec une certaine transparence */
+    width: 100%; /* Largeur de 100% */
+    height: 100%; /* Hauteur de 100% */
+    align-items: center; /* Centrage vertical */
+    position: fixed; /* Position fixe par rapport à la fenêtre */
+    top: 0; /* Alignement en haut de la fenêtre */
+    left: 0; /* Alignement à gauche de la fenêtre */
+    z-index: 10000; /* Indice de positionnement pour s'assurer que le loader soit au-dessus des autres éléments */
+    overflow: hidden; /* Masquage du débordement pour éviter le défilement */
+}
+
+/* Animation de sortie du loader */
+.loader-container.fade-out{
+    top:110%; /* Déplace le loader vers le bas de la fenêtre */
+    opacity:0; /* Réduit l'opacité à 0 pour le rendre invisible */
+}
+
+/* Style des cercles du loader */
+.circle01{
+    position: absolute; /* Position absolue par rapport à son conteneur */
+    width: 300px; /* Largeur du premier cercle */
+    height: 300px; /* Hauteur du premier cercle */
+    border: 2px solid #191919; /* Bordure du cercle */
+    border-radius: 50%; /* Bordure arrondie pour créer un cercle */
+    animation: animate 3s linear infinite; /* Animation de rotation avec une durée de 3 secondes */
+}
+
+.circle02{
+    width: 200px; /* Largeur du deuxième cercle */
+    height: 200px; /* Hauteur du deuxième cercle */
+    animation: animate 6s linear infinite; /* Animation de rotation avec une durée de 6 secondes */
+}
+
+.circle03{
+    width: 100px; /* Largeur du troisième cercle */
+    height: 100px; /* Hauteur du troisième cercle */
+    animation: animate 2s linear infinite; /* Animation de rotation avec une durée de 2 secondes */
+}
+
+/* Définition de l'animation de rotation */
+@keyframes animate{
+    0%{
+        transform: rotate(0deg); /* Rotation de 0 degré au début de l'animation */
+    }
+    100%{
+        transform: rotate(360deg); /* Rotation de 360 degrés à la fin de l'animation pour revenir à la position initiale */
+    }
+}
+
+/* Style du point au centre de chaque cercle */
+.circle01::before{
+    content: ''; /* Contenu généré avant l'élément */
+    position: absolute; /* Position absolue par rapport au cercle */
+    top: -12px; /* Positionnement vers le haut pour le placer au centre */
+    left: 50%; /* Positionnement horizontal au centre */
+    transform: translateX(-50%); /* Décalage de 50% de la largeur pour le centrer horizontalement */
+    width: 20px; /* Largeur du point */
+    height: 20px; /* Hauteur du point */
+    background: var(--clr); /* Couleur de fond du point */
+    border-radius: 50%; /* Bordure arrondie pour créer un cercle */
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr); /* Ombre pour créer un effet de halo */
+}
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size:55%;
+    }
+
+    header{
+        padding: 1rem 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+}
+@media (max-width:768px){
+    header .icons #menu-bars{
+        display: inline-block;
+    
+    }
+    .header1 .navbar{
+        top:0; right: 0;
+        background-size: cover;
+        background-position: center; 
+        height: 100px;
+        padding:1rem ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        box-shadow: var(--box-shadow);
+        text-align: center;    
+        position: absolute;
+        top:100%; left:0; right:0;
+        background:#0000005f;
+        border-top:.1rem solid rgba(0,0,0,.2);
+        border-bottom:.1rem solid rgba(0,0,0,.2);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header1 .navbar.active{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    .header1 .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #fffdfd00;
+    }
+    .planet span {
+        opacity: 0;
+        position: absolute;
+        top:30%; /* Adjust spacing */
+        left: 50%; /* Center the text horizontally */
+        transform: translateX(-50%); /* Added */
+        padding: .5rem 1.5rem;
+        border-radius: 5.5rem;
+        white-space: nowrap;
+        color: white;
+        transition: opacity .8s ease;
+    }
+
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
+    }
+
+    .home .home-slider .slide .content h1{
+        font-size:5cap;
+    }
+    
+}
+
+@media (max-width:450px){
+    html{
+        font-size:50%;
+    }
+
+}
